@@ -1,0 +1,17 @@
+<md-card>
+  <md-list>
+    <md-list-item>
+      <md-input-container>
+        <input mdInput value="" placeholder="User ID" #username>
+      </md-input-container>
+    </md-list-item>
+    <md-list-item>
+      <md-input-container>
+        <input mdInput value="" placeholder="Password" #password>
+      </md-input-container>
+    </md-list-item>
+    <md-list-item>
+      <button md-button (click)="login(username.value, password.value)">Log in</button>
+    </md-list-item>
+  </md-list>
+</md-card>

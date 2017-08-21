@@ -42,12 +42,22 @@ import { AuthGuard } from './_guards/index';
 import { AuthenticationService, UserService } from './_services/index';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { GroupComponent } from './group/group.component';
+import { NodeComponent } from './node/node.component';
+import { RoleComponent } from './role/role.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent,
+    GroupComponent,
+    NodeComponent,
+    RoleComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

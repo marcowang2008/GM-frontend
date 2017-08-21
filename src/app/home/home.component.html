@@ -1,3 +1,25 @@
-<p>
-  home works!
-</p>
+<md-sidenav-container class="gm-root" fullscreen>
+  <md-sidenav #sidenav mode="side" opened="true">
+    <md-card class="profile-card-container">
+      <md-card-header>
+        <img md-card-avatar>
+        <md-card-title>Welcome! {{currentUser.username}}</md-card-title>
+        <md-card-subtitle>Role: Admin</md-card-subtitle>
+      </md-card-header>
+    </md-card>
+    <md-nav-list>
+      <a *ngFor="let navItem of navItems" md-list-item [routerLink]="[navItem.route]">
+        {{navItem.name}}
+      </a>
+      <hr>
+
+      <button md-button [routerLink]="['/login']">Logout</button>
+    </md-nav-list>
+  </md-sidenav>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-container>
+
